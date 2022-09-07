@@ -1,4 +1,6 @@
-#ifndef _MONTY_H_
+#ifndef _MONTY_H
+#define _POSIX_C_SOURCE  200809L
+#define _GNU_SOURCE_
 #define _MONTY_H_
 
 #include <stdlib.h>
@@ -79,5 +81,6 @@ void free_stack(int status, void *arg);
 void m_fs_close(int status, void *arg);
 void free_lineptr(int status, void *arg);
 stack_t *add_node(stack_t **stack, const int n);
+int on_exit(void (*function)(int, void *), void *arg);
 
 #endif /* _MONTY_H_ */
